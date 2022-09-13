@@ -28,7 +28,6 @@ int main( ) {
 		exit( 1 );
 	}
 
-	printf("Test\n");
 	/* Modify the program so it
 	 * 1) read the chunk size from the command line arguments
 	 * 2) connects to www.ecst.csuchico.edu on port 80 (mostly done above)
@@ -55,7 +54,7 @@ int main( ) {
 	while(1){                              //Continuously receive bytes
 	 	temp = bytes_recv;                   //Initialize our bytes recieved counter
 	  	bytes_recv += recv(s, re, reLen, 0); //Increment our bytes recieved counter
-		/*
+		
 		char *toSearch = re;
 		toSearch = strstr( toSearch, header );
 		while( toSearch != NULL)
@@ -63,9 +62,7 @@ int main( ) {
 			h1_recv++;
 			toSearch += 4;
 			toSearch = strstr( toSearch, header );
-			printf("%s\n", h1_recv);
 		}
-		printf("Test\n");
 		/*
 		for(int i = 0; i < 1000; i+){       //Count the <h1> tags in the chunk
       		if(re[i] == '<'){                  //Condition evaluates to true if we have a < in the chunk
