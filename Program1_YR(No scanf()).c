@@ -49,12 +49,11 @@ int main( ) {
 	char re[1000];
 	int reLen = 1000, bytes_recv = 0, h1_recv = 0, temp = 0, chunk = 0;
 	char *header = "<h1>";
-  	scanf("%d\n", chunk);                  //Get input from the command line specifying chunk size
+  	//scanf("%d\n", chunk);                  //Get input from the command line specifying chunk size
 
 	while(1){                              //Continuously receive bytes
 	 	temp = bytes_recv;                   //Initialize our bytes recieved counter
 	  	bytes_recv += recv(s, re, reLen, 0); //Increment our bytes recieved counter
-		
 		char *toSearch = re;
 		toSearch = strstr( toSearch, header );
 		while( toSearch != NULL)
